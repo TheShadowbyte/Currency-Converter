@@ -20,7 +20,7 @@ select {
 	font-size: 0.9em;
 }
 
-#currency-calculator {
+.currency-calculator {
 	border: 1px solid black;
 	margin: 0 auto;
 	overflow: hidden;
@@ -35,7 +35,7 @@ select {
 
 @media (min-width: 501px) {
 
-	#currency-calculator {
+	.currency-calculator {
 		float: left;
 		width: 33%;
 	}
