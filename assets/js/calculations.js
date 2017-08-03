@@ -14,6 +14,7 @@ var changeBaseCurrency = function() {
 	}
 
 	getExchangeRate(baseCurrency, selectedResultCurrency);
+
 	return baseCurrency;
 
 }
@@ -32,6 +33,7 @@ var changeResultCurrency = function() {
 	}
 
 	getExchangeRate(baseCurrency, resultCurrency);
+
 	return resultCurrency;
 
 }
@@ -45,7 +47,8 @@ function getExchangeRate(baseCurrency, resultCurrency) {
 
 	var xmlhttp = new XMLHttpRequest();
 
-	// Fetch rates depending on selected base and result currencies
+	// Fetch rates depending on selected base and result currencies.
+	// Can be scaled up to include all currencies.
 
 	xmlhttp.open("GET", "http://api.fixer.io/latest?base=" + baseCurrency + "&symbols=" + resultCurrency, true);
 	xmlhttp.send();
@@ -69,10 +72,11 @@ function getExchangeRate(baseCurrency, resultCurrency) {
 				var baseCurrencyValue = document.getElementById("base-currency-value");
 				var resultCurrencyValue = document.getElementById("result-currency-value");
 
-				resultCurrencyValue.value = baseCurrencyValue.value * resultCurrencyRate;
+				resultCurrencyValue.value = (baseCurrencyValue.value * resultCurrencyRate).toFixed(2);
 
-				baseCurrencyValue.onchange = function() {
-					resultCurrencyValue.value = baseCurrencyValue.value * resultCurrencyRate;
+				// onchange was the old way, but it wasn't dynamic enough
+				baseCurrencyValue.onkeyup = function() {
+					resultCurrencyValue.value = (baseCurrencyValue.value * resultCurrencyRate).toFixed(2);
 				}
 
 			}
