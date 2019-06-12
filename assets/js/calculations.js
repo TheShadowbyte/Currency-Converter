@@ -44,8 +44,9 @@ var resultCurrency = changeResultCurrency();
 /**
  * The old-fashioned request format. If jQuery was allowed, I would use modern AJAX
  *
- * @param {string} baseCurrency - A string param
- * @return {string} type
+ * @param {string} baseCurrency - Testing ESDoc param 1
+ * @param {string} resultCurrency - Testing ESDoc param 2
+ * @return {string} Testing return
  *
  * @example
  *
