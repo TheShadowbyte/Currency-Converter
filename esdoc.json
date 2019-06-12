@@ -1,6 +1,6 @@
 {
-  "source": "assets/js",
-  "destination": "doc",
+  "source": "./assets/js",
+  "destination": "./docs",
   "plugins": [
     {"name": "esdoc-publish-html-plugin"}
   ]
