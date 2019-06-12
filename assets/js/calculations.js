@@ -41,8 +41,16 @@ var changeResultCurrency = function() {
 var baseCurrency = changeBaseCurrency();
 var resultCurrency = changeResultCurrency();
 
-// The old-fashioned request format
-// If jQuery was allowed, I would use modern AJAX
+/**
+ * The old-fashioned request format. If jQuery was allowed, I would use modern AJAX
+ *
+ * @param {string} baseCurrency - A string param
+ * @return {string} type
+ *
+ * @example
+ *
+ *     foo('hello')
+ */
 function getExchangeRate(baseCurrency, resultCurrency) {
 
 	var xmlhttp = new XMLHttpRequest();
