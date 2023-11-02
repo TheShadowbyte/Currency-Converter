@@ -77,14 +77,6 @@ Explain how to run the automated tests for this system.
 - [Express.js](https://expressjs.com/) - The web application framework.
 - [@everapi/freecurrencyapi-js](https://github.com/link-to/freecurrencyapi-js) - Used to interact with the Free Currency API.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://github.com/your-username/currency-converter-api/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/TheShadowbyte/Currency-Converter/tags).
-
 ## Authors
 
 - **TheShadowbyte** - *Initial work* - [TheShadowbyte](https://github.com/TheShadowbyte)
