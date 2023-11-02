@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Currency Calculator</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+Z1phyzds9r7JX+2WijBNs2vM5F4t/JH6dHDp7g=" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+
+		<template id="currency-calculator-template">
+			<div class="currency-calculator">
+				<h3>Currency Converter</h3>
+				<p class="description">Type in amount and select currency:</p>
+				<input id="base-currency-value" type="number" name="base-currency" min="0.01" step="0.01" value="0.00">
+				<select id="base-currency-choices" name="base-currency-choices"></select>
+				<p class="description">Converted amount:</p>
+				<input id="result-currency-value" type="number" name="result-currency" min="0.01" step="0.01" value="0.00" readonly>
+				<select id="result-currency-choices" name="result-currency-choices"></select>
+				<br /><br />
+				<button class="calculate-button">Calculate</button>
+				<br/><br/>
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#disclaimer-modal">Disclaimer</button>
+			</div>
+		</template>
+
+		<!-- The Modal -->
+		<div class="modal" id="disclaimer-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Disclaimer</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<p>Exchange rates are provided by <a href="https://freecurrencyapi.com/" target="_blank" rel="noopener noreferrer">freecurrencyapi.com</a> and are for informational purposes only. They do not constitute advice, and should not be relied upon as a basis for making financial decisions.</p>
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Include Bootstrap JS and its dependencies (use the correct path or CDN) -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.1/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<div id="currency-calculator-wrap-1"></div>
+		<div id="currency-calculator-wrap-2"></div>
+		<div id="currency-calculator-wrap-3"></div>
+
+<!--		<script type="text/javascript" src="assets/js/web-template.js"></script>-->
+<!--		<script type="text/javascript" src="assets/js/calculations.js"></script>-->
+
+	</body>
+</html>
