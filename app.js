@@ -19,8 +19,17 @@ app.get('/get-currencies', (req, res) => {
     res.json(currencies);
 });
 
-app.get('/get-exchange-rates', (req, res) => {
+app.get('/get-exchange-rates/:baseCurrency/:resultCurrency', (req, res) => {
+
+    const baseCurrency = req.params.baseCurrency;
+    const resultCurrency = req.params.resultCurrency;
+
+    if (!baseCurrency || !resultCurrency) {
+        return res.status(400).json({ error: 'You must specify both a base currency and a result currency' });
+    }
+
     getExchangeRates(req, res);
+
 });
 
 

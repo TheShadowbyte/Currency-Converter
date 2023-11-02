@@ -9,11 +9,6 @@ const generateClone = () => {
 };
 
 // Use const for these DOM element references
-const firstHost = document.querySelector("#currency-calculator-wrap-1");
-const secondHost = document.querySelector("#currency-calculator-wrap-2");
-const thirdHost = document.querySelector("#currency-calculator-wrap-3");
+const firstHost = document.querySelector("#currency-calculator-wrap");
 
-// Append the clones to their respective hosts
 firstHost.appendChild(generateClone());
-// secondHost.appendChild(generateClone());
-// thirdHost.appendChild(generateClone());
