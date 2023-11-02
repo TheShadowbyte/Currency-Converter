@@ -47,11 +47,15 @@ The server will start on `http://localhost:3000`.
 
 ### Using the API
 
-To convert currencies, make a `GET` request to the endpoint with the required parameters:
+To convert currencies using the API, make a `GET` request to the endpoint with the base and target currencies as URL segments:
 
-    GET /get-exchange-rates?baseCurrency=USD&resultCurrency=EUR
+    GET /get-exchange-rates/baseCurrency/resultCurrency
 
-This will return the exchange rate from USD to EUR.
+For example, to convert from US Dollar (USD) to Euro (EUR), you would send a `GET` request to:
+
+    GET /get-exchange-rates/USD/EUR
+
+This request will return the exchange rate from USD to EUR.
 
 ## API Reference
 
