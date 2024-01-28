@@ -1,4 +1,4 @@
-# Currency Converter
+# Currency Converter (NOTE: THIS PROJECT IS STILL IN DEVELOPMENT, DO NOT USE)
 
 This project provides both an API and a frontend interface for converting currencies using the latest exchange rates from the Free Currency API. The backend offers a RESTful API endpoint for programmatic access, while the frontend provides a user-friendly web interface for direct currency conversion.
 
